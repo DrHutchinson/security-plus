@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Sheri Hutchinson | Fall 2026 Zoom</title>
+  <style>
+    :root {
+      --navy: #17324d;
+      --navy-dark: #0f2438;
+      --red: #a6233c;
+      --red-dark: #861c31;
+      --blue-soft: #eef4f8;
+      --gray-soft: #f6f7f9;
+      --border: #d9e0e6;
+      --text: #1f2933;
+      --muted: #5f6b76;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #f7f9fb 0%, #eef2f5 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .site-shell {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(15, 36, 56, .90), rgba(23, 50, 77, .94)),
+        linear-gradient(135deg, #17324d, #234d73);
+      color: var(--white);
+      border-radius: 18px 18px 0 0;
+      padding: 42px 34px 36px;
+      box-shadow: 0 10px 28px rgba(17, 39, 60, .14);
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      text-transform: uppercase;
+      font-size: .82rem;
+      letter-spacing: .14em;
+      font-weight: 700;
+      opacity: .92;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2.25rem, 5vw, 3.7rem);
+      line-height: 1.05;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .hero .subtitle {
+      margin: 12px 0 0;
+      font-size: 1.12rem;
+      max-width: 760px;
+      color: #eef5fb;
+    }
+
+    .accent-bar {
+      height: 7px;
+      background: var(--red);
+    }
+
+    .content {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 0;
+      border-radius: 0 0 18px 18px;
+      padding: 34px;
+      box-shadow: 0 10px 28px rgba(17, 39, 60, .10);
+    }
+
+    .intro {
+      max-width: 780px;
+      margin-bottom: 26px;
+    }
+
+    .intro h2 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.8rem;
+    }
+
+    .zoom-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: center;
+      background: var(--blue-soft);
+      border: 1px solid #cddce8;
+      border-left: 7px solid var(--red);
+      border-radius: 14px;
+      padding: 26px;
+      margin: 22px 0 30px;
+    }
+
+    .zoom-card h3 {
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: 1.45rem;
+    }
+
+    .zoom-card p {
+      margin: 5px 0;
+    }
+
+    .join-button {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      padding: 14px 22px;
+      border-radius: 9px;
+      white-space: nowrap;
+      box-shadow: 0 4px 10px rgba(166, 35, 60, .18);
+    }
+
+    .join-button:hover,
+    .join-button:focus {
+      background: var(--red-dark);
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      margin: 34px 0 12px;
+    }
+
+    .schedule-box {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+      background: var(--navy);
+      color: var(--white);
+      text-align: left;
+      padding: 13px 15px;
+      font-size: .98rem;
+    }
+
+    td {
+      padding: 14px 15px;
+      border-top: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: var(--gray-soft);
+    }
+
+    .label {
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .tip-box {
+      margin-top: 28px;
+      background: #fff8f9;
+      border: 1px solid #ebcbd2;
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+
+    .tip-box strong {
+      color: var(--red);
+    }
+
+    .contact {
+      margin-top: 30px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .contact a {
+      color: #0b629a;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 720px) {
+      .hero,
+      .content {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .zoom-card {
+        grid-template-columns: 1fr;
+      }
+
+      .join-button {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-shell">
+
+    <header class="hero">
+      <p class="kicker">Central Lakes College · Fall 2026</p>
+      <h1>Dr. Sheri Hutchinson</h1>
+      <p class="subtitle">
+        Weekly Zoom access for CompTIA Security+ and Fall 2026 course meetings.
+      </p>
+    </header>
+
+    <div class="accent-bar"></div>
+
+    <main class="content">
+
+      <section class="intro">
+        <h2>Welcome</h2>
+        <p>
+          Use this page as your quick access point for our weekly Zoom sessions.
+          Bookmark this page so you can return to the same meeting link throughout Fall 2026.
+        </p>
+      </section>
+
+      <section class="zoom-card" aria-labelledby="weekly-zoom-heading">
+        <div>
+          <h3 id="weekly-zoom-heading">Weekly Zoom Meeting — Fall 2026</h3>
+          <p><span class="label">Instructor:</span> Dr. Sheri Hutchinson</p>
+          <p><span class="label">Meeting ID:</span> 905 325 1911</p>
+          <p><span class="label">Weekly class time:</span> Thursdays, 10:00–11:50 a.m.</p>
+        </div>
+
+        <div>
+          <a class="join-button"
+             href="https://minnstate.zoom.us/j/9053251911?omn=97626031832"
+             target="_blank"
+             rel="noopener">
+            Join Weekly Zoom
+          </a>
+        </div>
+      </section>
+
+      <h2 class="section-title">Zoom Meeting Information</h2>
+
+      <div class="schedule-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Information</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="label">Semester</td>
+              <td>Fall 2026</td>
+            </tr>
+            <tr>
+              <td class="label">Meeting Day</td>
+              <td>Thursday</td>
+            </tr>
+            <tr>
+              <td class="label">Meeting Time</td>
+              <td>10:00–11:50 a.m.</td>
+            </tr>
+            <tr>
+              <td class="label">Meeting ID</td>
+              <td>905 325 1911</td>
+            </tr>
+            <tr>
+              <td class="label">Minnesota Dial-In</td>
+              <td><a href="tel:+16513728299">+1 651 372 8299</a></td>
+            </tr>
+            <tr>
+              <td class="label">One-Tap Mobile</td>
+              <td>
+                <a href="tel:+16513728299,,9053251911#">
+                  +1 651 372 8299,,9053251911#
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip-box">
+        <strong>Before class:</strong>
+        Join a few minutes early, check your audio and microphone, and—when possible—join from the same computer you use for your Security+ labs so troubleshooting is easier.
+      </div>
+
+      <section class="contact">
+        <p>
+          <strong>Dr. Sheri Hutchinson</strong><br>
+          Central Lakes College<br>
+          <a href="mailto:sheri.hutchinson@clcmn.edu">sheri.hutchinson@clcmn.edu</a>
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      Central Lakes College · CompTIA Security+ · Fall 2026
+    </footer>
+
+  </div>
+</body>
+</html>
